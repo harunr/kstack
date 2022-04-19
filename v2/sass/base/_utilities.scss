@@ -1,0 +1,25 @@
+// Utilities
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  
+  &--desktop {
+    @include respond(bp-small) {
+      text-align: right !important;
+    }
+  }
+}
+
+.break--desktop-only {
+  display: none;
+
+  @include respond(bp-small) {
+    display: block;
+  }
+}
+
+.word-wrap-anythere {
+  word-wrap: anywhere;
+}

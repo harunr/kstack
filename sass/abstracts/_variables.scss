@@ -1,0 +1,42 @@
+// Colors
+$color-primary:#44D7B6;
+$color-dark-blue: #344054;
+$color-blue: #6A7CF6;
+$color-medium-blue: #D7DEEA;
+$color-light-blue: #F3F5F9;
+$color-lighter-blue: #FAFDFF;
+$color-purple: #9753FF;
+$color-light-grey: #D7DCE3;
+$color-white: #fff;
+
+// Spacing for sections
+$spacing-section-vertical-mobile: 2rem;
+$spacing-section-horizontal-mobile: 2rem;
+$spacing-section-vertical-desktop: 5rem;
+$spacing-section-horizontal-desktop: 8rem;
+
+// Spacing for the cards
+$spacing-card-expandable: 2rem;
+$spacing-card-static-vertical: 3rem;
+$spacing-card-static-horizontal: 3rem;
+
+// Spacing for the grid system
+$spacing-grid-gap-mobile: 2rem;
+$spacing-grid-gap-desktop: 3rem;
+
+// Spacing for the Nav
+$spacing-height-nav-mobile: 7rem;
+
+// Borders
+$border-radius-default: 1rem;
+$border-radius-input: .5rem;
+
+// Z-indexes
+$z-index-modal: 999999;
+$z-index-modal-close-btn: 999;
+$z-index-nav: 99999;
+$z-index-card-image: 999;
+$z-index-card-category: 9999;
+
+// Expandable Cards
+$cards-expandable-width-desktop: 28rem;

@@ -1,0 +1,71 @@
+.footer {
+  background-color: $color-dark-blue;
+  padding: $spacing-section-vertical-mobile $spacing-section-horizontal-mobile;
+
+  @include respond(bp-small) {
+    padding: 3rem $spacing-section-horizontal-desktop $spacing-section-vertical-desktop;
+  }
+
+  &__main-column {
+    grid-column-end: span 12;
+
+    @include respond(bp-medium) {
+      grid-column-end: span 5;
+    }
+  }
+
+  &__site-column {
+    grid-column-end: span 4;
+
+    @include respond(bp-medium) {
+      grid-column-end: span 2;
+    }
+  }
+
+  &__blog-column {
+    grid-column-end: span 4;
+
+    @include respond(bp-medium) {
+      grid-column-end: span 3;
+    }
+  }
+
+  &__contact-column {
+    grid-column-end: span 4;
+
+    @include respond(bp-medium) {
+      grid-column-end: span 2;
+    }
+  }
+
+  &__logo-img {
+    display: block;
+    margin-bottom: 2rem;
+    max-width: 12rem;
+    width: 12rem;
+  }
+
+  &__social-link {
+    display: inline-block;
+
+    & + .footer__social-link {
+      margin-left: 2.5rem;
+    }
+  }
+
+  &__social-img {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__copy-section {
+    border-top: .1rem solid $color-white;
+    margin-top: 3rem;
+    padding-top: 1rem;
+  }
+}

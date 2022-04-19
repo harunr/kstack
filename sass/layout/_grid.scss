@@ -1,0 +1,72 @@
+.grid {
+  display: grid;
+  gap: $spacing-grid-gap-mobile;
+  grid-template-columns: repeat(12, 1fr);
+  margin: $spacing-grid-gap-mobile auto 0;
+  position: relative;
+  width: 100%;
+  grid-auto-flow: dense;
+
+  @include respond(bp-small) {
+    align-items: center;
+    margin-top: $spacing-grid-gap-desktop;
+  }
+
+  &--start-align {
+    @include respond(bp-small) {
+      align-items: start;
+    }
+  }
+
+  &__col {
+    &--1,
+    &--2,
+    &--3,
+    &--4,
+    &--5,
+    &--6,
+    &--7,
+    &--8,
+    &--9,
+    &--10,
+    &--11,
+    &--12 {
+      grid-column-end: span 12;
+    }
+
+    @include respond(bp-small) {
+      @include grid-column(1, 1);
+      @include grid-column(2, 2);
+      @include grid-column(3, 3);
+      @include grid-column(4, 4);
+      @include grid-column(5, 5);
+      @include grid-column(6, 6);
+      @include grid-column(7, 7);
+      @include grid-column(8, 8);
+      @include grid-column(9, 9);
+      @include grid-column(10, 10);
+      @include grid-column(11, 11);
+      @include grid-column(12, 12);
+    }
+
+    &--reverse {
+      order: -1;
+      
+      @include respond(bp-small) {
+        order: 1;
+      }
+    }
+    
+    &--right-border {
+      @include respond(bp-small) {
+        border-right: 1px dashed $color-purple;
+      }
+    }
+  }
+
+  
+
+  &--stretch-columns {
+    align-items: stretch;
+  }
+}

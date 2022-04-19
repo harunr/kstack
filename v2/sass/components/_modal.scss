@@ -1,0 +1,127 @@
+.modal {
+  background-color: rgba($color-white, .5); 
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.5s;
+  width: 100vw;
+  z-index: $z-index-modal;
+
+  &--open {
+    opacity: 1;
+    pointer-events: all;
+
+    .modal__inner {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 1s ease, transform .5s ease;
+    }
+  }
+
+  &__inner {
+    background-color: $color-white;
+    opacity: 0;
+    overflow-y: auto;
+    padding: $spacing-section-vertical-desktop $spacing-section-horizontal-mobile;
+    transform: translateY(-100%);
+    transition: opacity 1s ease, transform 2.5s ease;
+
+    @include respond(bp-small) {
+      padding: $spacing-section-vertical-desktop $spacing-section-horizontal-desktop;
+    }
+  }
+
+  &__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__main-content,
+  &__controls {
+    margin-bottom: 4rem !important;
+  }
+
+  &__main-content {
+    margin-top: -3rem !important;
+
+    @include respond(bp-small) {
+      margin-top: -2rem !important;
+    }
+  }
+
+  &__column {
+    @include respond(bp-small) {
+      padding: 0 $spacing-section-horizontal-desktop !important;
+    }
+  }
+
+  &__image-container {
+    border-radius: $border-radius-default;
+    height: 100%;
+    margin-left: -$spacing-section-horizontal-mobile;
+    margin-right: -$spacing-section-horizontal-mobile;
+    max-height: 40vw;
+    overflow: hidden;
+    width: auto;
+
+    @include respond(bp-small) {
+      margin-left: auto;
+      margin-right: auto;
+      max-height: 25vw;
+      width: 100%;
+    }
+  }
+
+  &__image {
+    height: auto;
+    transform: translateY(-40%);
+    width: 100%;
+  }
+
+  &__close-btn-container {
+    margin-top: -1rem;
+    text-align: right;
+
+    @include respond(bp-small) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__close-btn {
+    z-index: $z-index-modal-close-btn;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+
+    @include respond(bp-small) {
+      margin-top: 4rem;
+    }
+
+    &--top {
+      margin-top: 1rem;
+    }
+  }
+
+  &__controls {
+    text-align: center;
+
+    @include respond(bp-small) {
+      padding-left: $spacing-section-horizontal-desktop * 3;
+      text-align: left;
+    }
+  }
+
+  &__close-img {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+}

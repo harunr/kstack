@@ -1,0 +1,17 @@
+{
+  "name": "k-stack-website",
+  "version": "1.0.0",
+  "description": "HTML cutup of the design",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "K STACK",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

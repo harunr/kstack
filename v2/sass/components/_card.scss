@@ -1,0 +1,193 @@
+.cards-expandable {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+
+  &__container {
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: nowrap;
+    padding-bottom: 2.8rem;
+    margin-right: -$spacing-section-horizontal-mobile;
+    margin-top: $spacing-section-vertical-mobile;
+    max-width: 100vw;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+
+    @include respond(bp-small) {
+      max-width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    background-color: $color-white;
+    border-radius: $border-radius-default;
+    display: flex;
+    flex: 2 0 auto;
+    flex-direction: column;
+    max-height: 44rem; 
+    max-width: $cards-expandable-width-desktop;
+    padding: $spacing-card-expandable;
+    position: relative;
+    scroll-snap-align: start;
+    transition: .3s ease;
+    width: 80vw;
+
+    @include respond(bp-small) {
+      height: 100vh;
+      width: $cards-expandable-width-desktop;
+    }
+
+    &:hover {
+      box-shadow: .9rem .9rem 1.3rem 0rem rgba($color-dark-blue, 0.1);
+    }
+
+    &--active {
+      transition: .3s ease;
+
+      @include respond(bp-small) {
+        max-width: $cards-expandable-width-desktop * 2 - $spacing-card-expandable;
+        width: $cards-expandable-width-desktop * 2 - $spacing-card-expandable;
+
+        .cards-expandable__info-container {
+          margin-left: $cards-expandable-width-desktop - $spacing-card-expandable * 2;
+          transition: .3s ease;
+        }
+
+        .cards-expandable__title,
+        .cards-expandable__description,
+        .cards-expandable__readmore-btn {
+          opacity: 1;
+          transition: .3s ease;
+        }
+      }
+    }
+
+    & + .cards-expandable__item {
+      margin-left: $spacing-section-horizontal-mobile;
+    }
+  }
+
+  &__image-container-outer,
+  &__image-container-inner {
+    border-radius: $border-radius-default;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__image-container-outer {
+    margin-bottom: 2rem;
+
+    @include respond(bp-small) {
+      height: 100%;
+      left: 0;
+      max-width: $cards-expandable-width-desktop;
+      padding: $spacing-card-expandable;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &__image-container-inner {
+    background-color: $color-white;
+    min-height: 14rem;
+  }
+
+  &__image {
+    background-color: $color-white;
+    height: auto;
+    position: relative;
+    transform: translateY(-25%);
+    width: 100%;
+    z-index: $z-index-card-image;
+
+    @include respond(bp-small) {
+      height: 100%;
+      transform: unset;
+      width: auto;
+    }
+  }
+
+  &__info-container {
+    @include respond(bp-small) {
+      height: 100%;
+      max-width: $cards-expandable-width-desktop;
+      padding: $spacing-card-expandable;
+      transition: .3s ease;
+      width: 100%;
+    }
+  }
+
+  &__category {
+    @include respond(bp-small) {
+      position: relative;
+      z-index: $z-index-card-category;
+    }
+  }
+
+  &__title,
+  &__description,
+  &__readmore-btn {
+    @include respond(bp-small) {
+      opacity: 0;
+      transition: .3s ease;
+    }
+  }
+
+  &__readmore-btn {
+    align-self: flex-start;
+  }
+
+  &__prev-img,
+  &__next-img {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+}
+
+.card-static {
+  background-color: $color-white;
+  border-radius: $border-radius-default;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: $spacing-card-static-vertical $spacing-card-static-horizontal;
+  transition: all .2s;
+
+  &:hover {
+    box-shadow: .9rem .9rem 1.3rem 0rem rgba($color-dark-blue, 0.1);
+  }
+
+  &__main-content {
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    display: block;
+    height: 18rem;
+    margin-bottom: 2.5rem;
+    max-width: 100%;
+
+    &--right-align {
+      margin-left: auto;
+    }
+  
+    &--bleedup {
+      margin-top: -4.5rem;
+    }
+  
+    &--bleeddown {
+      margin-bottom: -4.5rem;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="11px"
+   height="19px"
+   viewBox="0 0 11 19"
+   version="1.1"
+   id="svg29"
+   sodipodi:docname="right-arrow.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata33">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview31"
+     showgrid="false"
+     inkscape:zoom="12.421053"
+     inkscape:cx="5.5"
+     inkscape:cy="8.7461888"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg29" />
+  <title
+     id="title2">left-arrow</title>
+  <defs
+     id="defs18">
+    <polyline
+       id="path-1"
+       points="20.1600009 18.4799997 26.8800008 25.4799996 20.1600009 32.4799994" />
+    <filter
+       x="-35.3%"
+       y="-17.0%"
+       width="160.3%"
+       height="133.9%"
+       filterUnits="objectBoundingBox"
+       id="filter-2">
+      <feMorphology
+         radius="1.67999997"
+         operator="dilate"
+         in="SourceAlpha"
+         result="shadowSpreadOuter1"
+         id="feMorphology5" />
+      <feOffset
+         dx="0"
+         dy="0"
+         in="shadowSpreadOuter1"
+         result="shadowOffsetOuter1"
+         id="feOffset7" />
+      <feMorphology
+         radius="1.67999997"
+         operator="erode"
+         in="SourceAlpha"
+         result="shadowInner"
+         id="feMorphology9" />
+      <feOffset
+         dx="0"
+         dy="0"
+         in="shadowInner"
+         result="shadowInner"
+         id="feOffset11" />
+      <feComposite
+         in="shadowOffsetOuter1"
+         in2="shadowInner"
+         operator="out"
+         result="shadowOffsetOuter1"
+         id="feComposite13" />
+      <feColorMatrix
+         values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0"
+         type="matrix"
+         in="shadowOffsetOuter1"
+         id="feColorMatrix15" />
+    </filter>
+  </defs>
+  <g
+     id="design"
+     transform="matrix(-1,0,0,1,11.73216,0)"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round">
+    <g
+       id="Case-Study"
+       transform="translate(-719,-2045)">
+      <g
+         id="Arrows"
+         transform="translate(701,2029)">
+        <g
+           id="Right">
+          <g
+             id="left-arrow"
+             transform="matrix(-1,0,0,1,47.040002,0)">
+            <use
+               xlink:href="#path-1"
+               id="use20"
+               style="fill:#000000;fill-opacity:1;filter:url(#filter-2)"
+               x="0"
+               y="0"
+               width="100%"
+               height="100%" />
+            <use
+               xlink:href="#path-1"
+               id="use22"
+               style="stroke:#b7c4da;stroke-width:3.3599999"
+               x="0"
+               y="0"
+               width="100%"
+               height="100%" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(bp-medium) {
+    font-size: 75%;
+  }
+
+  @include respond(bp-large) {
+    font-size: 100%;
+  }
+
+  @include respond(bp-xlarge) {
+    font-size: 115%;
+  }
+
+  /* Old media queries
+  @include respond(bp-xxlarge) {
+    font-size: 150%;
+  }
+
+  @include respond(bp-mbp15) {
+    font-size: 170%;
+  }
+
+  @include respond(bp-mbp16) {
+    font-size: 182%;
+  }
+
+  @include respond(bp-4kdisplay) {
+    font-size: 225%;
+  }*/
+}
+
+body {
+  background-color: $color-light-blue;
+  box-sizing: border-box;
+  font-family: 'arial', sans-serif;
+  font-size: 1.6rem;
+} 

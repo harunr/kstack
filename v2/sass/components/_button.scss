@@ -1,0 +1,96 @@
+// Buttons
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2.8rem;
+    position: relative;
+    text-decoration: none;
+    transition: all .2s;
+  }
+
+  &__icon {
+    height: .75rem;
+    margin-right: 1rem;
+    width: .75rem;
+  }
+
+  &--primary,
+  &--secondary,
+  &--nav-close,
+  &--nav-prev,
+  &--nav-next {
+    &:hover {
+      box-shadow: .9rem .9rem 1.3rem 0rem rgba($color-dark-blue, 0.3);
+      transform: translateY(-3px);
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: .7rem .7rem .7rem 0rem rgba($color-dark-blue, 0.3);
+      transform: translateY(-1px);
+    }
+  }
+
+  &--primary {
+    background-color: $color-blue;
+    color: $color-white;
+    padding: 1rem 3rem;
+  }
+
+  &--secondary {
+    background-color: $color-light-grey;
+    color: $color-dark-blue;
+    display: flex;
+    padding: 1rem 3rem;
+  }
+
+  &--nav-close,
+  &--nav-prev,
+  &--nav-next {
+    background-color: $color-white;
+    border-radius: 1.5rem;
+    height: 5rem;
+    margin-top: 0;
+    width: 5rem;
+  }
+
+  &--nav-prev {
+    & + .btn--nav-next {
+      margin-left: 1rem;
+    }
+  }
+
+  &--nav-close {
+    border-radius: 10rem;
+  }
+
+  &--disabled-nav-prev,
+  &--disabled-nav-next {
+    cursor: default;
+    opacity: .4;
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none !important;
+      transform: unset !important;
+    }
+  }
+
+  &--link {
+    color: $color-dark-blue;
+    padding: 1rem 1.5rem;
+  }
+
+  &--icon {
+    align-items: center;
+    display: flex;
+  }
+}

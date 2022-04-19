@@ -1,0 +1,51 @@
+// Media Querie Manager
+@mixin respond($breakpoint) {
+  @if $breakpoint == bp-tablet {
+    @media only screen and (min-width: 30em) { @content }; // 480px
+  }
+
+  @if $breakpoint == bp-small {
+      @media only screen and (min-width: 48em) { @content }; // 768px
+  }
+
+  @if $breakpoint == bp-medium {
+      @media only screen and (min-width: 64em) { @content }; // 1024px
+  }
+
+  @if $breakpoint == bp-large {
+      @media only screen and (min-width: 85.375em) { @content }; // 1366px
+  }
+
+  @if $breakpoint == bp-xlarge {
+      @media only screen and (min-width: 120em) { @content }; // 1920px
+  }
+
+  @if $breakpoint == bp-xxlarge {
+    @media only screen and (min-width: 160em) { @content }; // 2560px
+  }
+
+  @if $breakpoint == bp-mbp15 {
+    @media only screen and (min-width: 180em) { @content }; // 2880px
+  }
+
+  @if $breakpoint == bp-mbp16 {
+    @media only screen and (min-width: 192em) { @content }; // 3072px
+  }
+
+  @if $breakpoint == bp-4kdisplay {
+    @media only screen and (min-width: 240em) { @content }; // 3840px
+  }
+}
+
+@mixin respond-vertically($breakpoint) {
+  @if $breakpoint == bp-tablet-vertically {
+    @media only screen and (min-height: 40.625em) { @content }; // 650px
+  }
+}
+
+// Grid Columns
+@mixin grid-column($number, $size) {
+  &--#{$number} {
+    grid-column-end: span $size;
+  }
+}
